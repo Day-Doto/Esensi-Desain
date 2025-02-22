@@ -13,6 +13,29 @@ body {
 }
 
 /* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between; /* Agar logo di kiri dan menu di kanan */
+  align-items: center; /* Agar logo sejajar dengan menu */
+  padding: 10px 20px; /* Sesuaikan padding */
+  background: #e0e0e0; /* Sesuaikan dengan warna yang ada */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 70px; /* Ukuran logo */
+  display: block; /* Pastikan tidak ada spasi ekstra */
+  margin: 0; /* Pastikan tidak ada margin aneh */
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
@@ -20,16 +43,12 @@ body {
   left: 0;
   width: 100%;
   display: flex; /* Menjadikan navbar fleksibel */
+  gap: 20px; /* Jarak Antara Menu */
   justify-content: space-between; /* Logo di kiri, menu di kanan */
   align-items: center; /* Pusatkan vertikal */
   background: #ddd; /* Warna background navbar */
   padding: 15px 20px; /* Padding agar terlihat lebih rapi */
   z-index: 1000;
-}
-
-/* Logo */
-.logo img {
-  height: 70px; /* Ukuran logo */
 }
 
 /* Menu Navigasi */
