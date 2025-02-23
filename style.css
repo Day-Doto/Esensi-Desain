@@ -1,13 +1,13 @@
 /** @format */
 
 :root {
-  --DDDD82: #9ddd82;
+  --primary-color: #9ddd82;
 }
 
 body {
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: var(--#9DDD82);
+  color: var(--primary-color);
   background: #f6f6f6;
   padding-top: 70px;
 }
