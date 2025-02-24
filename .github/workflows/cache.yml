@@ -1,0 +1,24 @@
+name: Cache Static Files
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            public/
+          key: ${{ runner.os }}-build-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+      - name: Deploy to GitHub Pages
+        run: |
+          git add .
+          git commit -m "Update website"
+          git push
