@@ -1,13 +1,13 @@
 /** @format */
 
 :root {
-  --primary-color: #9ddd82;
+  --primary-color: black;
 }
 
 body {
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: var(--primary-color);
+  color: var(--blackr);
   background: #f6f6f6;
   padding-top: 70px;
 }
