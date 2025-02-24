@@ -4,11 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
 
   if (hamburger && menu) {
-    hamburger.addEventListener("click", function () {
+    hamburger.addEventListener("click", function (event) {
       menu.classList.toggle("active");
+      event.stopPropagation(); //mencegah event klik menyebar ke document
+    });
+    // Menutup menu jika klik diluar
+    document.addEventListener("click", function (event) {
+      if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove(active);
+      }
     });
   }
-
   // Lazy Loading Gambar
   let images = document.querySelectorAll('img[loading="lazy"]');
   images.forEach((img) => {

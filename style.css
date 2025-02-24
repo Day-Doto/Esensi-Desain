@@ -18,6 +18,7 @@ body {
   color: var(--primary-color);
   background: #f6f6f6;
   padding-top: 70px;
+  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -42,6 +43,12 @@ body {
   height: 70px; /* Ukuran logo */
   display: block; /* Pastikan tidak ada spasi ekstra */
   margin: 0; /* Pastikan tidak ada margin aneh */
+}
+.logo p {
+  font-size: 18px;
+  color: #09122c;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 /* Navbar */
@@ -96,7 +103,7 @@ body {
   font-size: 30px; /* Ukuran ikon */
   color: black; /* Warna ikon */
   cursor: pointer; /* Cursor jadi tangan saat hover */
-  padding-right: 60px;
+  padding-right: 100px;
 }
 
 /* ======= Responsif: Menu untuk HP & Tablet ======= */
