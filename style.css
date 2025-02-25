@@ -203,6 +203,10 @@ section {
   }
   .text-section {
     max-width: 100%;
+    text-align: center;
+  }
+  .text-section h1 {
+    text-align: center;
   }
 }
 /* Bagian Ke 1 Akhir */
