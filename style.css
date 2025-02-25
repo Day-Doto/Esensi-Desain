@@ -20,50 +20,41 @@ body {
   padding-top: 70px;
   overflow-x: hidden;
 }
-
-/* HEADER */
-.header {
-  display: flex;
-  justify-content: space-between; /* Agar logo di kiri dan menu di kanan */
-  align-items: center; /* Agar logo sejajar dengan menu */
-  padding: 10px 20px; /* Sesuaikan padding */
-  background: #e0e0e0; /* Sesuaikan dengan warna yang ada */
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+html,
+body {
+  overflow-x: hidden;
 }
 
+/* HEADER */
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
+  gap: clamp (5px, 2vw, 12px); /* Jarak antara logo dan teks*/
 }
 .logo img {
-  height: 70px; /* Ukuran logo */
-  display: block; /* Pastikan tidak ada spasi ekstra */
-  margin: 0; /* Pastikan tidak ada margin aneh */
+  height: auto; /* Ukuran logo */
+  max-width: 100px;
 }
 .logo p {
-  font-size: 18px;
-  color: #09122c;
-  font-weight: bold;
-  margin-bottom: 0;
+  font-size: clamp (14px, 3vw, 18px);
+  white-space: nowrap; /* Mencegah teks turun kebawah*/
 }
 
 /* Navbar */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   display: flex; /* Menjadikan navbar fleksibel */
-  gap: 20px; /* Jarak Antara Menu */
   justify-content: space-between; /* Logo di kiri, menu di kanan */
   align-items: center; /* Pusatkan vertikal */
-  background: #ddd; /* Warna background navbar */
   padding: 15px 20px; /* Padding agar terlihat lebih rapi */
+  background: #ddd; /* Warna background navbar */
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1000;
+  left: 0;
+  gap: 20px; /* Jarak Antara Menu */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Menu Navigasi */
@@ -72,8 +63,7 @@ body {
   display: flex; /* Menu ditampilkan horizontal */
 }
 .menu.active {
-  display: none;
-  /*display: flex !important;*/
+  display: flex !important; /* Paksa agar Menu Muncul */
   flex-direction: column;
 }
 
@@ -142,6 +132,18 @@ body {
   .hamburger {
     display: block; /* Ikon hamburger muncul di layar kecil */
   }
+}
+
+.header {
+  padding: 10px 15px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo p {
+  display: none;
 }
 
 /* Smooth Scroll */
@@ -397,7 +399,7 @@ h1 {
 /* Footer styling */
 .footer {
   background-color: #fbfbfb;
-  color: #fff;
+  color: #09122c;
   text-align: center;
   padding: 20px;
   font-family: Georgia, "Times New Roman", Times, serif, sans-serif;
