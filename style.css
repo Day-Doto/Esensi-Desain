@@ -265,10 +265,6 @@ section {
   font-weight: bold;
   display: inline-block;
 }
-.btn:hover {
-  background-color: #8cd48b;
-}
-
 /* Desain Popular */
 h1 {
   font-size: 2rem; /* Ukuran font judul */
